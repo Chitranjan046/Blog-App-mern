@@ -1,4 +1,4 @@
-import User from '../models/User.js';
+import User from '../models/user.js';
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from '../utils/error.js';
 import jwt from 'jsonwebtoken';
@@ -33,6 +33,8 @@ export const signup = async (req, res, next) => {
   }
 };
 
+
+
 export const signin = async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -66,6 +68,10 @@ export const signin = async (req, res, next) => {
     next(error);
   }
 };
+
+
+
+
 
 export const googleAuth = async (req, res, next) => {
   const { email, name, googlePhotoUrl } = req.body;
@@ -113,4 +119,3 @@ export const googleAuth = async (req, res, next) => {
     next(error);
   }
 };
-
