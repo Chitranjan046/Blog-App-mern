@@ -33,14 +33,14 @@ export default function SignIn() {
       if (data.success === false) {
         dispatch(signInFailure(data.message));
       }
-      setLoading(false);
+      
       if (res.ok) {
         dispatch(signInSuccess());
         navigate('/');
       }
     } catch (error) {
       dispatch(signInFailure(data.message));
-      setLoading(false);
+      
     }
   };
   return (
