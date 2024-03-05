@@ -12,7 +12,8 @@ import Footer from './components/Footer';
 import PrivateRoute from "./components/private/PrivateRoute";
 import OnlyAdminPrivateRoute from "./components/private/OnlyAdminPrivateRoute";
 import CreatePost from "./pages/admin/CreatePost";
-import UpdatePost from "./pages/dashboard/UpdatePost";
+import UpdatePost from "./pages/admin/UpdatePost";
+import PostPage from "./pages/posts/PostPage";
 export default function App() {
   return (
     <BrowserRouter>
@@ -37,6 +38,7 @@ export default function App() {
         <Route path='/research' element={<Research/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/projects' element={<Projects/>} />
+        <Route path='/post/:postSlug' element={<PostPage />} />
 
 
     </Routes>
