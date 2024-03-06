@@ -2,7 +2,7 @@ import { Button, Spinner } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CallToAction from '../../components/posts/CallToAction';
-import CommentSection from '../../components/posts/CommentSection';
+import CommentSection from '../../components/comments/CommentSection';
 
 
 
