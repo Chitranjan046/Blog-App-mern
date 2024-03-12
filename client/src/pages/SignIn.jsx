@@ -8,6 +8,7 @@ import {
   signInFailure,
 } from '../redux/user/userSlice';
 import GAuth from '../components/GAuth';
+import background1 from '../assets/background/background1.jpg';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -23,7 +24,7 @@ export default function SignIn() {
       return dispatch(signInFailure('Please fill all the fields'));
     }
     try {
-        dispatch(signInStart());
+      dispatch(signInStart());
       const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -33,29 +34,34 @@ export default function SignIn() {
       if (data.success === false) {
         dispatch(signInFailure(data.message));
       }
-      
+
       if (res.ok) {
-        dispatch(signInSuccess());
+        dispatch(signInSuccess(data));
         navigate('/');
       }
     } catch (error) {
-      dispatch(signInFailure(data.message));
-      
+      dispatch(signInFailure(error.message));
     }
   };
   return (
-    <div className='min-h-screen mt-20'>
-      <div className='flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-20'>
+    <div
+      className='min-h-screen  bg-cover bg-center'
+      style={{ backgroundImage: `url(${background1})` }}
+    >
+      <header className="z-50">
+        {/* Your header content */}
+      </header>
+      <div className='flex  max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5 bg-white bg-opacity-50 rounded-lg p-5 shadow-inner shadow-gray-500'>
         {/* left */}
-        <div className='flex-1'>
+        <div className='flex-1 bg-white bg-opacity-50 rounded-lg p-5 shadow-inner shadow-gray-500'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
-            <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-              <i>Cpx</i>
+            <span className='px-2 py-1 bg-gradient-to-bl from-yellow-300 via-green-300 to-red-300 rounded-lg text-white'>
+              Chitranjan
             </span>
-            Please login
+            Blog
           </Link>
           <p className='text-sm mt-5'>
-            This is a I build viks patel project. You can sign in with your email and password
+            This is a Hype Square Media Project. You can sign in with your email and password
             or with Google.
           </p>
         </div>
@@ -67,7 +73,8 @@ export default function SignIn() {
               <Label value='Your email' />
               <TextInput
                 type='email'
-                placeholder='name@company.com'
+                className='bg-white bg-opacity-50 rounded-lg p-5 shadow-inner shadow-gray-500'
+                placeholder='name@gmail.com'
                 id='email'
                 onChange={handleChange}
               />
@@ -76,6 +83,7 @@ export default function SignIn() {
               <Label value='Your password' />
               <TextInput
                 type='password'
+                className='bg-white bg-opacity-50 rounded-lg p-5 shadow-inner shadow-gray-500'
                 placeholder='**********'
                 id='password'
                 onChange={handleChange}
@@ -113,6 +121,3 @@ export default function SignIn() {
     </div>
   );
 }
-
-
-

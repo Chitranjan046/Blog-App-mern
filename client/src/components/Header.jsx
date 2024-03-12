@@ -6,6 +6,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import { toggleTheme } from '../redux/theme/themeSlice';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useEffect, useState } from 'react';
+
+
 export default function Header() {
   const path = useLocation().pathname;
   const location = useLocation();
@@ -115,10 +117,10 @@ export default function Header() {
           <Link to='/'>Home</Link>
         </Navbar.Link>
         <Navbar.Link active={path === "/about"} as={'div'}>
-          <Link to='/about'>About</Link>
+          <Link to='/about'>About Us</Link>
         </Navbar.Link>
         <Navbar.Link active={path === "/contact"} as={'div'}>
-          <Link to='/contact'>Contact</Link>
+          <Link to='/contact'>Contact Us</Link>
         </Navbar.Link>
         <Navbar.Link active={path === "/projects"} as={'div'}>
           <Link to='/projects'>Projects</Link>
