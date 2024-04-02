@@ -1,51 +1,23 @@
-import React from 'react';
-
-const heading = 'Contact Me';
-
-function Contact(props) {
-    return (
-            <div className="bg-backgroundColorPrimary">
-                <div id="Contact" className="mx-auto flex flex-col min-h-screen justify-center items-center">
-
-                        <h1 className="text-3xl font-bold leading-tight text-textColorSecondary text-center">{heading}</h1>
-
-                    <form className="w-2/3 md:w-1/3 space-y-8 flex flex-col">
-                        <div>
-                            <input
-                                type="text"
-                                name="name"
-                                className=" border-b border-textColorSecondary placeholder-textColorTertiary bg-transparent focus:outline-none w-full mt-12 xl:mt-36 py-3 transition-transform hover:border-b-2"
-                                placeholder="Name"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                type="text"
-                                name="number"
-                                className="border-b border-textColorSecondary placeholder-textColorTertiary bg-transparent focus:outline-none w-full py-3 transition-transform hover:border-b-2"
-                                placeholder="Number"
-                            />
-                        </div>
-                        <div>
-                            <textarea
-                                name="message"
-                                className="border-b border-textColorSecondary placeholder-textColorTertiary bg-transparent focus:outline-none w-full py-3 transition-transform hover:border-b-2"
-                                rows="4"
-                                placeholder="Message"
-                            ></textarea>
-                        </div>
-                        <button
-                            type="submit"
-                            className="bg-textColorPrimary text-backgroundColorPrimary mx-auto mt-4 p-2 w-48"
-                        >
-                            Submit
-                        </button>
-                    </form>
-
-                </div>
-            </div>
-
-    );
+import '../pages/contactstyle.css';
+const Contact = () =>{
+return(
+<>
+<div className="contanier-info">
+<div className="contact-box">
+<div className="left">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.95106615534!2d76.76355477113817!3d28.644287345100643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1711554045357!5m2!1sen!2sin"  style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div className="right">
+<h3>Contact Me</h3>
+<input type="text"className="flied" placeholder="Enter your Name"/>
+<input type="text" className="flied"placeholder="Enter your Email"/>
+<input type="text" className="flied"placeholder="Enter your Phone"/>
+<textarea   placeholder="Messages" className="flied"></textarea>
+<button className="left-parimay">Send</button>
+</div>
+</div>
+</div>
+</>
+)
 }
-
 export default Contact;

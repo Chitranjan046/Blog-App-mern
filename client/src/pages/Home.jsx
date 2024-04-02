@@ -46,8 +46,14 @@ export default function Home() {
         </div>
 
         {/* Next and previous buttons */}
-        <a className="prev" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? 4 : prevIndex - 1))}>&#10094;</a>
-        <a className="next" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 5)}>&#10095;</a>
+<a className="prev h-60 w-20" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? 4 : prevIndex - 1))}>&#10094;</a>
+<a className="next h-60 w-20" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 5)}>&#10095;</a>
+
+
+{/* Next and previous buttons
+<a className="prev h-60 w-20 !important" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? 4 : prevIndex - 1))}>&#10094;</a>
+<a className="next h-60 w-20 !important" onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 5)}>&#10095;</a> */}
+
       
         <Link
           to='/search'

@@ -1,0 +1,32 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+ul li ul.dropdown li {
+ display: block;
+ height: 2rem;
+ text-align: center;
+ line-height: 1rem;
+}
+
+ul li ul.dropdown {
+ width: 10rem;
+ background-color: lightcyan;
+ color: black;
+ position: absolute;
+ left: 55%;
+ z-index: 999;
+ display: none;
+ font-size: 17px;
+}
+
+ul li ul.dropdown a:hover {
+ color: rgb(186, 168, 168);
+}
+
+li:hover ul.dropdown {
+ display: block;
+}

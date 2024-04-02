@@ -1,22 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
-import SignIn from './pages/SignIn';
-import Dashboard from './pages/dashboard/Dashboard';
-import SignUp from './pages/SignUp';
-import Header from './components/Header';
-import Research from "./pages/Research";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from './components/Footer';
-import PrivateRoute from "./components/private/PrivateRoute";
+import Header from './components/Header';
+import ScrollToTop from "./components/ScrollToTop";
 import OnlyAdminPrivateRoute from "./components/private/OnlyAdminPrivateRoute";
+import PrivateRoute from "./components/private/PrivateRoute";
+import About from './pages/About';
+import Contact from "./pages/Contact";
+import Home from './pages/Home';
+import Projects from "./pages/Projects";
+import Research from "./pages/Research";
+import Search from './pages/Search';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 import CreatePost from "./pages/admin/CreatePost";
 import UpdatePost from "./pages/admin/UpdatePost";
+import Dashboard from './pages/dashboard/Dashboard';
 import PostPage from "./pages/posts/PostPage";
-import ScrollToTop from "./components/ScrollToTop";
-import Search from './pages/Search';
-
+import Conferences from "./pages/research/Conferences";
+import Enviroment from './pages/research/Enviroment';
+import Journal from "./pages/research/Journal";
+import Publication from './pages/research/Publication';
 export default function App() {
   return (
     <BrowserRouter>
@@ -44,6 +47,11 @@ export default function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/projects' element={<Projects/>} />
         <Route path='/post/:postSlug' element={<PostPage />} />
+<Route path="/Journal" element={<Journal/>}/>
+<Route path="/Conferences" element={<Conferences/>}/>
+<Route path="/Enviroment" element={<Enviroment/>}/>
+<Route path="/Publication" element={<Publication/>}/>
+
 
 
     </Routes>

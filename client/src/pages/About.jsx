@@ -1,50 +1,27 @@
-export default function About() {
-  return (
-    <div className='min-h-screen flex items-center justify-center'>
-      <div className='max-w-2xl mx-auto p-3 text-center'>
-        <div>
-          <h1 className='text-3xl font font-semibold text-center my-7'>
-            About Chitranjan
-          </h1>
-          <div className='text-md text-gray-500 flex flex-col gap-6'>
-            <p>
-            My name is Chitranjan Patel  CEO and MD of CPX Pvt Limited . 
-            I working as a Software Engineer with 1+ years of experience background
-             in creating and executing innovative software solutions to enhance 
-             business productivity a wide range of  technology skills. Proven 
-             ability to leverage full-stack knowledge and experience to build 
-             interactive and user-censered website designs to scale.  Highly 
-             experienced in all aspects of the software development lifecycle
-              and end-to-end project management,  from concept through to development
-               and delivery Consistently recognized as a hands-on. 
-            </p>
-
-            <p>
-            My name is Chitranjan Patel  CEO and MD of CPX Pvt Limited . 
-            I working as a Software Engineer with 1+ years of experience background
-             in creating and executing innovative software solutions to enhance 
-             business productivity a wide range of  technology skills. Proven 
-             ability to leverage full-stack knowledge and experience to build 
-             interactive and user-censered website designs to scale.  Highly 
-             experienced in all aspects of the software development lifecycle
-              and end-to-end project management,  from concept through to development
-               and delivery Consistently recognized as a hands-on.
-            </p>
-
-            <p>
-            My name is Chitranjan Patel  CEO and MD of CPX Pvt Limited . 
-            I working as a Software Engineer with 1+ years of experience background
-             in creating and executing innovative software solutions to enhance 
-             business productivity a wide range of  technology skills. Proven 
-             ability to leverage full-stack knowledge and experience to build 
-             interactive and user-censered website designs to scale.  Highly 
-             experienced in all aspects of the software development lifecycle
-              and end-to-end project management,  from concept through to development
-               and delivery Consistently recognized as a hands-on.
-            </p>
-          </div>
+import image6 from '../assets/image/image6.png';
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+const About = () =>{
+return(
+<>
+<div className="container grid grid-two-column">
+        <div className="section-hero-data">
+          <p className="hero-top-data">THIS IS ME</p>
+          <h4 className="hero-heading">CHITRANJAN PATEL</h4>
+          <p className="hero-para">
+            I'm  A Full stack Developer freelancer. A Full
+            stack Developer, youtuber and freelancer.
+          </p>  
         </div>
-      </div>
-    </div>
-  );
+ {/* for image  */}
+        <div className="section-hero-image">
+          <picture>
+            <img src={image6} alt="hero image" className="hero-img " />
+          </picture>
+        </div>  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</>
+)
 }
+export default About;
