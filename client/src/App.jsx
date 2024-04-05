@@ -6,8 +6,8 @@ import OnlyAdminPrivateRoute from "./components/private/OnlyAdminPrivateRoute";
 import PrivateRoute from "./components/private/PrivateRoute";
 import About from './pages/About';
 import Contact from "./pages/Contact";
+import GeneralInformation from "./pages/General Information";
 import Home from './pages/Home';
-import Projects from "./pages/Projects";
 import Research from "./pages/Research";
 import Search from './pages/Search';
 import SignIn from './pages/SignIn';
@@ -15,6 +15,11 @@ import SignUp from './pages/SignUp';
 import CreatePost from "./pages/admin/CreatePost";
 import UpdatePost from "./pages/admin/UpdatePost";
 import Dashboard from './pages/dashboard/Dashboard';
+import AirQuality from './pages/generalinformation/AirQuality';
+import Covid19 from "./pages/generalinformation/Covid19";
+import Dryland from './pages/generalinformation/Dryland';
+import Ghg from "./pages/generalinformation/Ghg";
+import Substainability from "./pages/generalinformation/Sustainability";
 import PostPage from "./pages/posts/PostPage";
 import Conferences from "./pages/research/Conferences";
 import Enviroment from './pages/research/Enviroment';
@@ -45,15 +50,17 @@ export default function App() {
 
         <Route path='/research' element={<Research/>} />
         <Route path='/contact' element={<Contact/>} />
-        <Route path='/projects' element={<Projects/>} />
+        <Route path='/General Information' element={<GeneralInformation/>} />
         <Route path='/post/:postSlug' element={<PostPage />} />
 <Route path="/Journal" element={<Journal/>}/>
 <Route path="/Conferences" element={<Conferences/>}/>
 <Route path="/Enviroment" element={<Enviroment/>}/>
 <Route path="/Publication" element={<Publication/>}/>
-
-
-
+<Route path="/Sustainability" element={<Substainability/>}/>
+<Route path="/AirQuality" element={<AirQuality/>}/>
+<Route path="/Dryland" element={<Dryland/>}/>
+<Route path="/Ghg" element={<Ghg/>}/>
+<Route path="/Covid19" element={<Covid19/>}/>
     </Routes>
     
     <Footer />
